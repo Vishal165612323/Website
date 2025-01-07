@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#00c6ff">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Login to EXP Tracker</h1>
+
+    <!-- Login Form -->
+    <form id="loginForm">
+      <label for="emailInput">Email:</label>
+      <input type="email" id="emailInput" placeholder="Enter your email" required aria-label="Email Input">
+      
+      <button type="submit" id="loginBtn" aria-label="Login Button">Login</button>
+    </form>
+
+    <div id="errorMessage" style="display: none; color: red;">
+      <p>Invalid email. Please try again.</p>
+    </div>
+  </div>
+
+  <script>
+    const allowedEmails = ['07.comer@gmail.com', 'vishal16980@gmail.com'];
+
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevent form submission
+
+      const email = document.getElementById('emailInput').value;
+
+      // Check if email is in the allowed list
+      if (allowedEmails.includes(email)) {
+        // Redirect to index.html if email is valid
+        window.location.href = 'main.html';
+      } else {
+        // Redirect to userlist.html for any other email
+        window.location.href = 'userlist.html';
+      }
+    });
+  </script>
+</body>
+</html>

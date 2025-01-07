@@ -1,0 +1,173 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #34495e); /* Dark background */
+  color: #ecf0f1; /* Light text color */
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
+  padding: 20px;
+}
+
+/* Typography */
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ecf0f1; /* Light color for headings */
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Stronger shadow for contrast */
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Stronger shadow for contrast */
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 480px;
+  background: #2c3e50; /* Dark background for container */
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Input and Button Styles */
+input,
+select,
+button {
+  font-size: 1rem;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #555; /* Darker border */
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+input,
+select {
+  background-color: #34495e; /* Dark background for input fields */
+  color: #ecf0f1; /* Light text for inputs */
+}
+
+input:focus,
+select:focus {
+  border-color: #1abc9c; /* Teal color for focus */
+  box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+button {
+  background-color: #1abc9c; /* Teal background for buttons */
+  color: #ecf0f1; /* Light text color */
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #16a085; /* Darker teal when hovered */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(22, 160, 133, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* User List */
+#userListUl {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#userListUl li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #34495e; /* Dark background for list items */
+  border: 1px solid #555; /* Dark border for list items */
+  border-radius: 8px;
+  color: #ecf0f1; /* Light text */
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#userListUl li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Username styling */
+.username-exp {
+  flex-grow: 1;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* Checkbox Styling */
+.user-checkbox {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Glow effect on selected checkbox */
+.user-checkbox:checked + .username-exp {
+  background-color: #1abc9c;  /* Highlight the background with teal */
+  color: #fff;  /* White text when selected */
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 0 8px rgba(26, 188, 156, 0.7);
+  transition: all 0.3s ease;
+}
+
+/* Remove Button */
+button#removeSelectedBtn {
+  background-color: #e74c3c; /* Red color for remove button */
+  color: #ecf0f1; /* Light text color */
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button#removeSelectedBtn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
